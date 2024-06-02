@@ -1,7 +1,7 @@
-const express = require('express');
-const { PrismaClient } = require('@prisma/client');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import express from 'express';
+import { PrismaClient } from '@prisma/client';
+import bodyParser from 'body-parser';
+import cors from 'cors';
 
 const prisma = new PrismaClient();
 const app = express();
@@ -11,9 +11,7 @@ app.use(bodyParser.json());
 
 app.post('/api/auth/login', async (req, res) => {
   const { email, password } = req.body;
-  const user = await prisma.user.findUnique({
-    where: { email },
-  });
+  const user = await prisma.user.findUnique({ where: { email } });
 
   if (user && user.password === password) {
     res.status(200).json({ message: 'Login successful' });
@@ -24,9 +22,7 @@ app.post('/api/auth/login', async (req, res) => {
 
 app.post('/api/auth/register', async (req, res) => {
   const { email, password } = req.body;
-  const user = await prisma.user.create({
-    data: { email, password },
-  });
+  const user = await prisma.user.create({ data: { email, password } });
   res.status(201).json(user);
 });
 
