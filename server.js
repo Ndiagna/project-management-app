@@ -1,13 +1,14 @@
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
-import bodyParser from 'body-parser';
+import { json, urlencoded } from "body-parser";
 import cors from 'cors';
 
 const prisma = new PrismaClient();
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(json()); // Utilisez json() pour analyser les corps de requêtes HTTP en JSON
+app.use(urlencoded({ extended: true }));
 
 app.post('/api/auth/login', async (req, res) => {
   const { email, password } = req.body;
@@ -22,9 +23,39 @@ app.post('/api/auth/login', async (req, res) => {
 
 app.post('/api/auth/register', async (req, res) => {
   const { email, password } = req.body;
-  const user = await prisma.user.create({ data: { email, password } });
-  res.status(201).json(user);
+
+  // Vérification si l'email est déjà utilisé
+  const existingUser = await prisma.user.findUnique({ where: { email } });
+  if (existingUser) {
+    return res.status(400).json({ error: 'Cet email est déjà utilisé.' });
+  }
+
+  // Vérification de la validité de l'email
+  if (!isValidEmail(email)) {
+    return res.status(400).json({ error: 'L\'adresse email n\'est pas valide.' });
+  }
+
+  // Vérification de la longueur du mot de passe
+  if (password.length < 8) {
+    return res.status(400).json({ error: 'Le mot de passe doit contenir au moins 8 caractères.' });
+  }
+
+  try {
+    // Création de l'utilisateur
+    const user = await prisma.user.create({ data: { email, password } });
+    res.status(201).json(user);
+  } catch (error) {
+    console.error('Une erreur s\'est produite lors de la création de l\'utilisateur :', error);
+    res.status(500).json({ error: 'Une erreur s\'est produite lors de la création de l\'utilisateur.' });
+  }
 });
+
+function isValidEmail(email) {
+  // Ajoutez ici votre logique de validation de l'email
+  // Par exemple, vérifiez si l'email correspond à un certain format
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 
 app.get('/api/projects', async (req, res) => {
   const projects = await prisma.project.findMany();

@@ -1,6 +1,11 @@
 import React, { Form } from '@remix-run/react';
-import { ActionFunction, redirect } from '@remix-run/node';
+import { ActionFunction, json, redirect, LinksFunction  } from '@remix-run/node';
 import { useState } from "react";
+import stylesUrl from 'app/styles/login.css';
+
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: stylesUrl }];
+};
 
 export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
@@ -26,15 +31,16 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState<string>('');
 
   return (
-    <div>
-      <h2>Login</h2>
-      <Form method="post">
+    <div className="container">
+      <form method="post" className="loginForm">
+        <h2 className="title">Login</h2>
         <input
           type="email"
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
+          className="input"
         />
         <input
           type="password"
@@ -42,9 +48,10 @@ const Login: React.FC = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
+          className="input"
         />
-        <button type="submit">Login</button>
-      </Form>
+        <button type="submit" className="button">Login</button>
+      </form>
     </div>
   );
 };

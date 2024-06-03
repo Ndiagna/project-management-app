@@ -1,6 +1,11 @@
 import React, { Form } from '@remix-run/react';
 import { useState } from 'react';
-import { ActionFunction, redirect } from '@remix-run/node';
+import { ActionFunction, redirect, LinksFunction } from '@remix-run/node';
+import stylesUrl from 'app/styles/register.css';
+
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: stylesUrl }];
+};
 
 export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
@@ -12,35 +17,40 @@ export const action: ActionFunction = async ({ request }) => {
     return { formError: 'Passwords do not match' };
   }
 
-  // Implémentez l'enregistrement ici
-  // Exemple :
-  // const response = await fetch('/api/auth/register', {
-  //   method: 'POST',
-  //   body: JSON.stringify({ email, password }),
-  //   headers: { 'Content-Type': 'application/json' }
-  // });
-  // if (response.ok) {
-  //   return redirect('/login');
-  // }
+  // Validation côté serveur
+  const response = await fetch('http://localhost:5000/api/auth/register', {
+    method: 'POST',
+    body: JSON.stringify({ email, password }),
+    headers: { 'Content-Type': 'application/json' }
+  });
 
-  return redirect('/login'); // Temporaire, ajustez selon votre logique d'enregistrement
+  if (response.ok) {
+    return redirect('/login');
+  } else {
+    // Gérer les erreurs
+    const errorData = await response.json();
+    return { formError: errorData.message }; // Si le serveur renvoie un message d'erreur
+  }
 };
 
 const Register: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
+  const [formError, setFormError] = useState<string | null>(null);
 
   return (
-    <div>
-      <h2>Register</h2>
-      <Form method="post">
+    <div className="container">
+      <h2 className="title">Register</h2>
+      {formError && <div className="error">{formError}</div>}
+      <Form method="post" className="loginForm">
         <input
           type="email"
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
+          className="input"
         />
         <input
           type="password"
@@ -48,6 +58,7 @@ const Register: React.FC = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
+          className="input"
         />
         <input
           type="password"
@@ -55,8 +66,9 @@ const Register: React.FC = () => {
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           placeholder="Confirm Password"
+          className="input"
         />
-        <button type="submit">Register</button>
+        <button type="submit" className="button">Register</button>
       </Form>
     </div>
   );
