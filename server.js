@@ -1,6 +1,7 @@
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
-import { json, urlencoded } from "body-parser";
+import pkg from 'body-parser';
+const { json, urlencoded } = pkg;
 import cors from 'cors';
 
 const prisma = new PrismaClient();

@@ -40,10 +40,13 @@ const Register: React.FC = () => {
   const [formError, setFormError] = useState<string | null>(null);
 
   return (
+    
     <div className="container">
-      <h2 className="title">Register</h2>
+      
       {formError && <div className="error">{formError}</div>}
       <Form method="post" className="loginForm">
+        
+      <h2 className="title">Registere</h2>
         <input
           type="email"
           name="email"

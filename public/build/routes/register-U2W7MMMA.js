@@ -3,11 +3,11 @@ import {
 } from "/build/_shared/chunk-G7CHZRZX.js";
 import {
   Form
-} from "/build/_shared/chunk-QBCH37WN.js";
+} from "/build/_shared/chunk-FLJDCTDX.js";
 import "/build/_shared/chunk-U4FRFQSK.js";
 import {
   createHotContext
-} from "/build/_shared/chunk-MAWQAWWW.js";
+} from "/build/_shared/chunk-QKHIKN7J.js";
 import "/build/_shared/chunk-UWV35TSL.js";
 import {
   require_jsx_dev_runtime
@@ -60,35 +60,35 @@ var Register = () => {
   const [confirmPassword, setConfirmPassword] = (0, import_react2.useState)("");
   const [formError, setFormError] = (0, import_react2.useState)(null);
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "container", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h2", { className: "title", children: "Register" }, void 0, false, {
-      fileName: "app/routes/register.tsx",
-      lineNumber: 72,
-      columnNumber: 7
-    }, this),
     formError && /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "error", children: formError }, void 0, false, {
       fileName: "app/routes/register.tsx",
       lineNumber: 73,
       columnNumber: 21
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Form, { method: "post", className: "loginForm", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "email", name: "email", value: email, onChange: (e) => setEmail(e.target.value), placeholder: "Email", className: "input" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h2", { className: "title", children: "Registere" }, void 0, false, {
         fileName: "app/routes/register.tsx",
-        lineNumber: 75,
-        columnNumber: 9
+        lineNumber: 76,
+        columnNumber: 7
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "password", name: "password", value: password, onChange: (e) => setPassword(e.target.value), placeholder: "Password", className: "input" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "email", name: "email", value: email, onChange: (e) => setEmail(e.target.value), placeholder: "Email", className: "input" }, void 0, false, {
         fileName: "app/routes/register.tsx",
         lineNumber: 77,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "password", name: "confirmPassword", value: confirmPassword, onChange: (e) => setConfirmPassword(e.target.value), placeholder: "Confirm Password", className: "input" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "password", name: "password", value: password, onChange: (e) => setPassword(e.target.value), placeholder: "Password", className: "input" }, void 0, false, {
         fileName: "app/routes/register.tsx",
         lineNumber: 79,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", { type: "submit", className: "button", children: "Register" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "password", name: "confirmPassword", value: confirmPassword, onChange: (e) => setConfirmPassword(e.target.value), placeholder: "Confirm Password", className: "input" }, void 0, false, {
         fileName: "app/routes/register.tsx",
         lineNumber: 81,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", { type: "submit", className: "button", children: "Register" }, void 0, false, {
+        fileName: "app/routes/register.tsx",
+        lineNumber: 83,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
@@ -113,4 +113,4 @@ export {
   register_default2 as default,
   links
 };
-//# sourceMappingURL=/build/routes/register-OST2FLZW.js.map
+//# sourceMappingURL=/build/routes/register-U2W7MMMA.js.map
