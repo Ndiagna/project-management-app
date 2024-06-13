@@ -1,0 +1,21 @@
+services:
+  app:
+    build: .
+    container_name: management_app
+    ports:
+      - "3000:3000"
+    environment:
+      MONGODB_URI: ${DATABASE_URL}
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  db:
+    image: mongo:4.4
+    container_name: management_db
+    environment:
+      MONGO_INITDB_DATABASE: mydatabase
+    ports:
+      - "27017:27017"

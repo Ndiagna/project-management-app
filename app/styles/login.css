@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4; /* un gris clair pour le fond */
+}
+
+.loginForm {
+  background: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px; /* Un peu plus étroit que l'exemple précédent */
+}
+
+.title {
+  margin-bottom: 2rem;
+  color: #444;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1rem;
+  background: #fafafa; /* Un fond légèrement différent pour les input */
+}
+
+.input:focus {
+  border-color: #30a4ff; /* Une teinte de bleu pour l'effet focus */
+  box-shadow: 0 0 0 2px rgba(48, 164, 255, 0.3);
+  outline: none;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Bleu vif */
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Un bleu plus sombre lors du survol */
+}
