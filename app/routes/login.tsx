@@ -33,7 +33,7 @@ const Login: React.FC = () => {
   return (
     <div className="container">
       <form method="post" className="loginForm">
-        <h2 className="title">Login</h2>
+        <h2 className="title">Logi</h2>
         <input
           type="email"
           name="email"
