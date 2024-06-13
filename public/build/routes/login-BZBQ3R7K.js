@@ -3,7 +3,7 @@ import {
 } from "/build/_shared/chunk-G7CHZRZX.js";
 import {
   createHotContext
-} from "/build/_shared/chunk-QKHIKN7J.js";
+} from "/build/_shared/chunk-F4W57I74.js";
 import "/build/_shared/chunk-UWV35TSL.js";
 import {
   require_jsx_dev_runtime
@@ -30,7 +30,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   prevRefreshReg = window.$RefreshReg$;
   prevRefreshSig = window.$RefreshSig$;
   window.$RefreshReg$ = (type, id) => {
-    window.$RefreshRuntime$.register(type, '"app\\\\routes\\\\login.tsx"' + id);
+    window.$RefreshRuntime$.register(type, '"app/routes/login.tsx"' + id);
   };
   window.$RefreshSig$ = window.$RefreshRuntime$.createSignatureFunctionForTransform;
 }
@@ -40,7 +40,7 @@ var _s = $RefreshSig$();
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
-    "app\\routes\\login.tsx"
+    "app/routes/login.tsx"
   );
 }
 var links = () => {
@@ -95,4 +95,4 @@ export {
   login_default2 as default,
   links
 };
-//# sourceMappingURL=/build/routes/login-QPTZRTWM.js.map
+//# sourceMappingURL=/build/routes/login-BZBQ3R7K.js.map

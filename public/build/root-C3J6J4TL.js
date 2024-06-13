@@ -4,11 +4,11 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration
-} from "/build/_shared/chunk-FLJDCTDX.js";
+} from "/build/_shared/chunk-2Z2JQSMU.js";
 import "/build/_shared/chunk-U4FRFQSK.js";
 import {
   createHotContext
-} from "/build/_shared/chunk-QKHIKN7J.js";
+} from "/build/_shared/chunk-F4W57I74.js";
 import "/build/_shared/chunk-UWV35TSL.js";
 import {
   require_jsx_dev_runtime
@@ -26,7 +26,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   prevRefreshReg = window.$RefreshReg$;
   prevRefreshSig = window.$RefreshSig$;
   window.$RefreshReg$ = (type, id) => {
-    window.$RefreshRuntime$.register(type, '"app\\\\root.tsx"' + id);
+    window.$RefreshRuntime$.register(type, '"app/root.tsx"' + id);
   };
   window.$RefreshSig$ = window.$RefreshRuntime$.createSignatureFunctionForTransform;
 }
@@ -35,7 +35,7 @@ var prevRefreshSig;
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
-    "app\\root.tsx"
+    "app/root.tsx"
   );
   import.meta.hot.lastModified = "1717191114000";
 }
@@ -111,4 +111,4 @@ export {
   Layout,
   App as default
 };
-//# sourceMappingURL=/build/root-LYA7XLDY.js.map
+//# sourceMappingURL=/build/root-C3J6J4TL.js.map

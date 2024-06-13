@@ -1,6 +1,6 @@
 import {
   createHotContext
-} from "/build/_shared/chunk-QKHIKN7J.js";
+} from "/build/_shared/chunk-F4W57I74.js";
 import "/build/_shared/chunk-UWV35TSL.js";
 import {
   require_jsx_dev_runtime
@@ -18,7 +18,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   prevRefreshReg = window.$RefreshReg$;
   prevRefreshSig = window.$RefreshSig$;
   window.$RefreshReg$ = (type, id) => {
-    window.$RefreshRuntime$.register(type, '"app\\\\routes\\\\_index.tsx"' + id);
+    window.$RefreshRuntime$.register(type, '"app/routes/_index.tsx"' + id);
   };
   window.$RefreshSig$ = window.$RefreshRuntime$.createSignatureFunctionForTransform;
 }
@@ -27,7 +27,7 @@ var prevRefreshSig;
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
-    "app\\routes\\_index.tsx"
+    "app/routes/_index.tsx"
   );
   import.meta.hot.lastModified = "1717233553168.7085";
 }
@@ -97,4 +97,4 @@ export {
   Index as default,
   meta
 };
-//# sourceMappingURL=/build/routes/_index-XWHWGKFU.js.map
+//# sourceMappingURL=/build/routes/_index-UNEF6SGZ.js.map

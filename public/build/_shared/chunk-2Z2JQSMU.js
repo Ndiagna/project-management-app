@@ -3,7 +3,7 @@ import {
 } from "/build/_shared/chunk-U4FRFQSK.js";
 import {
   createHotContext
-} from "/build/_shared/chunk-QKHIKN7J.js";
+} from "/build/_shared/chunk-F4W57I74.js";
 import {
   require_react
 } from "/build/_shared/chunk-7M6SC7J5.js";
@@ -7977,7 +7977,7 @@ var LiveReload = (
       console.warn(["`<LiveReload />` is obsolete when using Vite and can conflict with Vite's built-in HMR runtime.", "", "Remove `<LiveReload />` from your code and instead only use `<Scripts />`.", "Then refresh the page to remove lingering scripts from `<LiveReload />`."].join("\n"));
       return null;
     }
-    origin ??= "http://localhost:3001/";
+    origin ??= "http://localhost:3002/";
     let js = String.raw;
     return /* @__PURE__ */ React4.createElement("script", {
       nonce,
@@ -8615,7 +8615,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   prevRefreshReg = window.$RefreshReg$;
   prevRefreshSig = window.$RefreshSig$;
   window.$RefreshReg$ = (type, id) => {
-    window.$RefreshRuntime$.register(type, '"node_modules\\\\@remix-run\\\\react\\\\dist\\\\esm\\\\browser.js"' + id);
+    window.$RefreshRuntime$.register(type, '"node_modules/@remix-run/react/dist/esm/browser.js"' + id);
   };
   window.$RefreshSig$ = window.$RefreshRuntime$.createSignatureFunctionForTransform;
 }
@@ -8625,7 +8625,7 @@ var _s = $RefreshSig$();
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
-    "node_modules\\@remix-run\\react\\dist\\esm\\browser.js"
+    "node_modules/@remix-run/react/dist/esm/browser.js"
   );
 }
 var stateDecodingPromise;
@@ -9269,4 +9269,4 @@ react-router-dom/dist/index.js:
    * @license MIT
    *)
 */
-//# sourceMappingURL=/build/_shared/chunk-FLJDCTDX.js.map
+//# sourceMappingURL=/build/_shared/chunk-2Z2JQSMU.js.map

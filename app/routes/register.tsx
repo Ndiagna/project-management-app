@@ -45,7 +45,6 @@ const Register: React.FC = () => {
       
       {formError && <div className="error">{formError}</div>}
       <Form method="post" className="loginForm">
-        
       <h2 className="title">Registere</h2>
         <input
           type="email"

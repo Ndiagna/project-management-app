@@ -2,13 +2,16 @@
 FROM node:22.2.0-alpine
 
 # Définir le répertoire de travail à l'intérieur du conteneur
-WORKDIR /usr/src/app 
+WORKDIR /app 
 
 # Copier les fichiers package.json et package-lock.json dans le répertoire de travail
 COPY package*.json ./
 
 # Installer les dépendances
 RUN npm install
+
+# Installer nodemon globalement
+RUN npm install -g nodemon
 
 # Copier tous les fichiers de l'application dans le conteneur
 COPY . .

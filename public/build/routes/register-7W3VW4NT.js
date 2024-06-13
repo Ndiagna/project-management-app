@@ -3,11 +3,11 @@ import {
 } from "/build/_shared/chunk-G7CHZRZX.js";
 import {
   Form
-} from "/build/_shared/chunk-FLJDCTDX.js";
+} from "/build/_shared/chunk-2Z2JQSMU.js";
 import "/build/_shared/chunk-U4FRFQSK.js";
 import {
   createHotContext
-} from "/build/_shared/chunk-QKHIKN7J.js";
+} from "/build/_shared/chunk-F4W57I74.js";
 import "/build/_shared/chunk-UWV35TSL.js";
 import {
   require_jsx_dev_runtime
@@ -34,7 +34,7 @@ if (!window.$RefreshReg$ || !window.$RefreshSig$ || !window.$RefreshRuntime$) {
   prevRefreshReg = window.$RefreshReg$;
   prevRefreshSig = window.$RefreshSig$;
   window.$RefreshReg$ = (type, id) => {
-    window.$RefreshRuntime$.register(type, '"app\\\\routes\\\\register.tsx"' + id);
+    window.$RefreshRuntime$.register(type, '"app/routes/register.tsx"' + id);
   };
   window.$RefreshSig$ = window.$RefreshRuntime$.createSignatureFunctionForTransform;
 }
@@ -44,7 +44,7 @@ var _s = $RefreshSig$();
 if (import.meta) {
   import.meta.hot = createHotContext(
     //@ts-expect-error
-    "app\\routes\\register.tsx"
+    "app/routes/register.tsx"
   );
 }
 var links = () => {
@@ -68,27 +68,27 @@ var Register = () => {
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Form, { method: "post", className: "loginForm", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h2", { className: "title", children: "Registere" }, void 0, false, {
         fileName: "app/routes/register.tsx",
-        lineNumber: 76,
+        lineNumber: 75,
         columnNumber: 7
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "email", name: "email", value: email, onChange: (e) => setEmail(e.target.value), placeholder: "Email", className: "input" }, void 0, false, {
         fileName: "app/routes/register.tsx",
-        lineNumber: 77,
+        lineNumber: 76,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "password", name: "password", value: password, onChange: (e) => setPassword(e.target.value), placeholder: "Password", className: "input" }, void 0, false, {
         fileName: "app/routes/register.tsx",
-        lineNumber: 79,
+        lineNumber: 78,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", { type: "password", name: "confirmPassword", value: confirmPassword, onChange: (e) => setConfirmPassword(e.target.value), placeholder: "Confirm Password", className: "input" }, void 0, false, {
         fileName: "app/routes/register.tsx",
-        lineNumber: 81,
+        lineNumber: 80,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("button", { type: "submit", className: "button", children: "Register" }, void 0, false, {
         fileName: "app/routes/register.tsx",
-        lineNumber: 83,
+        lineNumber: 82,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
@@ -113,4 +113,4 @@ export {
   register_default2 as default,
   links
 };
-//# sourceMappingURL=/build/routes/register-U2W7MMMA.js.map
+//# sourceMappingURL=/build/routes/register-7W3VW4NT.js.map
